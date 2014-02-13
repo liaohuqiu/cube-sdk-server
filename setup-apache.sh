@@ -30,6 +30,7 @@ app_dir='/prj/apps/cube'
 ensure_dir $app_dir
 exe_cmd "ln -sf $current_dir/htdocs $app_dir/htdocs"
 exe_cmd "sudo chown -RL www:www $app_dir"
+exe_cmd "sudo chown -RL www:www $app_dir/htdocs"
 
 apache_conf_dir="/usr/local/apache/conf/vhosts"
 ensure_dir $apache_conf_dir
